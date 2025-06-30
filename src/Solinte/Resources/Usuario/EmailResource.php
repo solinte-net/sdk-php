@@ -4,7 +4,7 @@ namespace Solinte\SdkPhp\Resources\Usuario;
 
 use Solinte\SdkPhp\Client;
 
-class PerfilResource {
+class EmailResource {
     private Client $client;
 
     public function __construct(Client $client) {
@@ -12,9 +12,9 @@ class PerfilResource {
     }
 
     /**
-     * Obtiene el perfil completo del usuario
+     * Obtiene el email del usuario
      */
     public function get(): array {
-        return $this->client->request('GET', '/usuario/perfil');
+        return $this->client->request('GET', '/usuario/email');
     }
-}
+} 
