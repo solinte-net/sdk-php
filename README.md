@@ -2,14 +2,13 @@
 
 # SDK de Solinte para PHP
 
-¡Bienvenido desarrolladores!
-
-Esta es una pequeña librería que te permite integrar fácilmente la plataforma Solinte en tus desarrollos.
+SDK oficial de Solinte para PHP que permite integrar fácilmente la plataforma de trabajo contable de Solinte en tus aplicaciones.
 
 ## 💡 Requisitos
 
-- PHP 8.2 o superior
+- PHP 8.0 o superior
 - Composer
+- Cuenta de desarrollador en Solinte
 
 ## 💻 Instalación
 
@@ -21,10 +20,10 @@ composer require solinte-net/sdk-php
 
 ## 🛠️ Configuración
 
-Para comenzar a usar el SDK, necesitás obtener las credenciales de aplicación desde el soporte de Solinte. Para más información podés consultar [documentación de la API](https://solinte.net/api.v1/).
+Para comenzar a usar el SDK, necesitas obtener las credenciales de tu aplicación desde el soporte de Solinte. Para más información podés consultar [documentación de la API](https://solinte.net/api.v1/).
 
 ```php
-use SolinteNet\SdkPhp\Client;
+use Solinte\SdkPhp\Client;
 
 $client = new Client([
     'client_id' => 'tu_client_id',
@@ -91,9 +90,9 @@ $saldo = $client->usuario()->roles()->saldo($rid, '2024-01-15');
 ```php
 try {
     $perfil = $client->usuario()->perfil()->get();
-} catch (SolinteNet\SdkPhp\Exceptions\ApiException $e) {
+} catch (Solinte\SdkPhp\Exceptions\ApiException $e) {
     echo "Error de API: " . $e->getMessage();
-} catch (SolinteNet\SdkPhp\Exceptions\OAuthException $e) {
+} catch (Solinte\SdkPhp\Exceptions\OAuthException $e) {
     echo "Error de autenticación: " . $e->getMessage();
 }
 ```

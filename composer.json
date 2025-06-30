@@ -14,7 +14,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SolinteNet\\SdkPhp\\": "src/Solinte/"
+            "Solinte\\SdkPhp\\": "src/Solinte/"
         }
     },
     "authors": [
